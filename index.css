@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2em 4em;
+    background: rgb(0, 168, 210);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 2px 2px 5px black;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    gap: 15px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+input[type=text], input[type=password] {
+    border: 0;
+    padding: .5em 1em;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type=submit] {
+    border: 0;
+    border-bottom: 3px solid rgba(255, 255, 255, .3);
+    padding: .5rem 1rem;
+    background: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+input[type=submit]:hover {
+    scale: 1.05;
+    border-bottom: 3px solid white;
+}

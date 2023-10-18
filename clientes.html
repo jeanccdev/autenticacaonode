@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Clientes</title>
+    <link rel="stylesheet" href="clientes.css">
+</head>
+
+<body>
+    <main>
+        <section class="clients-container">
+            <h1>Clientes</h1>
+            <table id="clients">
+                <tr>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                </tr>
+            </table>
+            <button id="logoutBtn" onclick="logout()">Sair</button>
+        </section>
+    </main>
+
+
+    <script>
+        const checkToken = async () => {
+            if(sessionStorage.getItem('token')) {
+                loadClients()
+            } else {
+                window.location.assign('index.html')
+            }
+        }
+
+        async function loadClients() {
+            const tableClients = document.getElementById('clients')
+            const clients = await fetch('http://localhost:3000/clientes').then(data => data.json())
+            clients.forEach(client => {
+                tableClients.innerHTML += `<tr><td>${client.nome}</td><td>${client.data_nascimento}</td></tr>`
+            })
+        }
+
+        checkToken()
+
+        const logout = () => {
+            localStorage.removeItem('token')
+            sessionStorage.removeItem('token')
+            window.location.assign('index.html')
+        }
+    </script>
+</body>
+
+</html>
