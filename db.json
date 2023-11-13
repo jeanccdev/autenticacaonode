@@ -1,6 +1,6 @@
 {
     "usuarios": [
-        { "id": 1, "usuario": "admin", "senha": "admin" }
+        { "id": 1, "usuario": "admin", "senha": "admin", "email": "jeancc1532@gmail.com" }
     ],
     "clientes": [
         { "id": 1, "nome": "Lucas da Silva", "data_nascimento": "20/02/1977" },

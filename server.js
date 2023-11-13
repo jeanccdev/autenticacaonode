@@ -1,12 +1,8 @@
 import express from 'express'
 import jsonwebtoken from 'jsonwebtoken'
 import 'dotenv/config'
-import { fileURLToPath } from 'url' 
-import path from 'path'
 import cors from 'cors'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+import sendToken from './sendToken.js'
 
 const app = express()
 app.use(express.json())
@@ -16,6 +12,11 @@ app.use(cors())
 const jwt = jsonwebtoken
 const PORT = process.env.PORT
 const jsonServer = process.env.JSONURL
+
+app.get('/test', (req, res) => {
+    sendToken('jeancc1532@gmail.com', 'hahahahahahha')
+    res.send('Token enviado')
+})
 
 app.post('/login', async (req, res) => {
     const { usuario, senha } = req.body
