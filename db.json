@@ -1,12 +1,45 @@
 {
-    "usuarios": [
-        { "id": 1, "usuario": "admin", "senha": "admin", "email": "jeancc1532@gmail.com" }
-    ],
-    "clientes": [
-        { "id": 1, "nome": "Lucas da Silva", "data_nascimento": "20/02/1977" },
-        { "id": 2, "nome": "Rafael Clemente", "data_nascimento": "16/03/1996" },
-        { "id": 3, "nome": "Larissa Manoela", "data_nascimento": "22/05/1985" },
-        { "id": 4, "nome": "Barbara Schneider", "data_nascimento": "09/02/1999" },
-        { "id": 5, "nome": "Erica Silveira", "data_nascimento": "05/08/1973" }
-    ]
+  "usuarios": [
+    {
+      "usuario": "1",
+      "senha": "1",
+      "email": "1@gmail.com",
+      "verificado": false,
+      "id": 1
+    },
+    {
+      "usuario": "admin",
+      "senha": "admin",
+      "email": "jeancc1532@gmail.com",
+      "verificado": true,
+      "id": 2
+    }
+  ],
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Lucas da Silva",
+      "data_nascimento": "20/02/1977"
+    },
+    {
+      "id": 2,
+      "nome": "Rafael Clemente",
+      "data_nascimento": "16/03/1996"
+    },
+    {
+      "id": 3,
+      "nome": "Larissa Manoela",
+      "data_nascimento": "22/05/1985"
+    },
+    {
+      "id": 4,
+      "nome": "Barbara Schneider",
+      "data_nascimento": "09/02/1999"
+    },
+    {
+      "id": 5,
+      "nome": "Erica Silveira",
+      "data_nascimento": "05/08/1973"
+    }
+  ]
 }
